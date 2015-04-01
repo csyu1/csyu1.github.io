@@ -1,7 +1,34 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Cat Clicker Premium</title>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <ul id="cat-list">
+    </ul>
+    
+    <button id="admin" type="button">Admin</button>
+    </br>
+    <div id="cat-admin">
+    <form id="cat-edit-form" action="#">
+        <input id="cat-name-input">
+        <input id="cat-count-input">
+        <input id="cat-image-input">
+        <input id="save" type="Submit" value="Save">
+        <input id="cancel" type="button" value="Cancel">
+    </form>
+    </div>
+
+    <div id="cat-showing">
+        <div id="cat-name"></div>
+        <img id="cat-img" src="">
+        <div id="cat-count"></div>
+    </div>
+    
+    
 </body>
+
+<script src="jquery.js"></script>
+<script src="catclicker.js"></script>
 </html>
