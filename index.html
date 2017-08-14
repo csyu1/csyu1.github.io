@@ -9,177 +9,316 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <style>
+
+ body {
+  color: #031926;
+  background-color: #9DBEBB;
+  font-family: 'Open Sans', sans-serif;
+ }
+
+ a {
+    color: #fff;
+ }
+
+.flip {
+  -webkit-perspective: 800;   
+          perspective: 800;
+        position: relative;
+        text-align: center;
+}
+.flip .card.flipped {
+  -webkit-transform: rotatey(-180deg);
+          transform: rotatey(-180deg);
+}
+.flip .card {
+    width: 300px;
+    height: 250px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    background-color: #77ACA2;
+    border-radius: 4px;
+}
+.flip .card .face {
+  -webkit-backface-visibility: hidden ;
+    backface-visibility: hidden ;
+   z-index: 2;
+}
+.flip .card .front {
+   position: absolute;
+   height: 300px;
+   width: 300px;
+   z-index: 1;
+}
+.flip .card .img {
+   position: relaitve;
+   width: 300px;
+   height: 250px;
+   z-index: 1;
+}
+.flip .card .back {
+  padding: 5%;
+  -webkit-transform: rotatey(-180deg);
+          transform: rotatey(-180deg);
+}
+  .inner{margin:0px !important;}
+
+  #about {
+    /*background-image: url("img/carousel1.jpg")*/
+    background-color: #468189;
+    padding-top:20px;
+    padding-bottom:20px;
+  }
+
+  .well {
+    background: #77ACA2;
+  }
+
+  .row {
+    padding-bottom: 40px;
+  }
+
+  #profile {
+    height:200px;
+    width:200px;
+  }
+@media (max-width: 767px) {
+  .col-xs-12 {
+    margin-bottom: 40px;
+  }
+  .row {
+    padding-bottom: 0px;
+  }
+}
+  </style>
   <title>Carl Yu</title>
 </head>
 
 
     
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-  <nav class="navbar navbar-inverse navbar-fixed-top navbar-wrapper">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#top">Carl Yu</a>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">                
-          <li><a href="#about">About<span class="sr-only">(current)</span></a></li>
-          <li><a href="#projects">Projects</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container marketing" id="about" style="padding-top:100px">
+<body data-spy="scroll">
+  <div class="container-fluid" id="about">
     <div class="row">
-      <div class="col-lg-5">
-        <img class="img-circle" src="img/profile.jpg" style="height:300px;width:300px">
       </div>
-      <div class="col-lg-7">
-        <p>Carl Earvin Yu is a BS Computer Science graduate from the University of the Philippines Diliman.
-	   Though his academic life is over, he believes that learning is a neverending journey. </p>
-        <p>Programmer by trade, and a <a href="https://www.jw.org/en/">Jehovah's Witness</a> by life.</p>
-        <p>A typical week of his includes coding, learning via MOOC, reading books, and, his personal favorite,
-	   time dedicated to the <a href="https://www.jw.org/en/jehovahs-witnesses/faq/door-to-door/">ministry</a>.</p>
+      <div class="col-lg-6 col-lg-offset-3 col-md-10 col-md-offset-1">
+      <div class="well">
+        <div class="row">
+        <div class="col-md-4">
+          <div class="pull-right">
+          <img class="img-circle" src="img/profile.jpg" id="profile">
+          </div>
+        </div>
+        <div class="col-md-8">
+        <h1>Carl Yu</h1>
+        <p><em>Programmer by trade, and a <a href="https://www.jw.org/en/">Jehovah's Witness</a> by life.</em></p>
+        <p>Hi! I consider myself as a life-long learner, who aims for self-improvement in all aspects of my life.
+        A typical week of mine includes coding, studying, reading books, and my personal favorite, time dedicated to
+        my <a href="https://www.jw.org/en/jehovahs-witnesses/faq/door-to-door/">ministry</a>.</p>
 
-	<p>Click <a href="https://trello.com/b/29kGxk7S"> here</a> to find out what I'm doing to refine my craft.</p>
+    	  <p>Click <a href="https://trello.com/b/29kGxk7S"> here</a> to find out what I'm doing to refine my craft.</p>
 
-	<p> If you have any suggestions, or just want to say hi, hit me up on carl.earvin.yu@gmail.com!</p>
+        <p>
 
-
-
-        <h4>Interests</h4>
-        <ul class="list-group">
-          <li class="list-group-item">Science</li>
-          <li class="list-group-item">Mathematics</li>
-          <li class="list-group-item">Data</li>
-          <li class="list-group-item">Books</li>
-          <li class="list-group-item">Board Games</li>
-        </ul>
+          <a href="https://twitter.com/whyyoucarl">
+            <i class="icon ion-social-twitter" style="font-size:25px"></i>
+          </a>
+           <a href="https://www.linkedin.com/in/carl-yu-41286b56">
+             <i class="icon ion-social-linkedin" style="font-size:25px"></i>
+           </a>
+           <a href="http://github.com/csyu1">
+             <i class="icon ion-social-github" style="font-size:25px"></i>
+           </a>
+         </p>
+        </div>
       </div>
-
+      </div>
     </div>
   </div>
+<div class="container marketing" id="interests">
 
-  <div class="container marketing" style="padding-top:30px" id="projects">
-    <h2>Things I Built/Worked On:</h2>
-    <hr class="featurette-divider">
-    <div class="row" id="project1"> 
-      <div class="col-lg-7">
-        <h3>DNS in Evolved Packet Core</h3> 
-        <br>
-        <br>
-        <p>
-          <span class="label label-pill label-default">Java</span>
-        </p>
-        <p>
-          <span class="label label-pill label-info">Telecommunications</span>
-        </p>
-        <p>
-          <span class="label label-pill label-success">R&amp;D Engineer</span>
-          <span class="label label-pill label-success">Scrum Master</span>
-        </p>
-      </div>
-      <div class="col-lg-5">
-        <img class="img-thumbnail" src="img/thumbnail1.png">
+<h3>Interests</h3>
+
+<div class="row">
+  <div class="col-md-4 col-xs-12">
+      <div class="flip">
+        <div class="card"> 
+          <div class="face front"> 
+            <div class="inner">   
+              <img class="img" src="img/bible.jpg">
+            </div>
+          </div> 
+          <div class="face back"> 
+            <div class="inner text-center"> 
+              <h4>My Spirituality and the Bible</h4>
+              <p>As a Jehovah's Witness, I am deeply interested in the Bible. I meditate on the wisdom in its pages, and
+              use it as a mirror to improve myself.</p>
+              <p><em>How I do love your law! I ponder over it all day long.</em> (Psalms 119:97, New World Translation)</p>
+            </div>
+          </div>
+        </div>   
       </div>
     </div>
-  <hr class="featurette-divider">
-    <div class="row" id="project2">
-      <div class="col-lg-7">
-        <h3>Project NOAH WebSAFE</h3>
-        <br>
-        <br>
-        <p>
-          <span class="label label-pill label-default">Python</span>
-        </p>
-        <p>
-          <span class="label label-pill label-primary">Web Development</span>
-          <span class="label label-pill label-danger">Disaster Risk Assessment</span>      
-        </p>
-        <p>
-          <span class="label label-pill label-success">API Development</span>
-          <span class="label label-pill label-success">Schema Design and Implementation</span>
-          <span class="label label-pill label-success">Data Cleaning and Entry</span>
-        </p>
+  <div class="col-md-4 col-xs-12">
+      <div class="flip">
+        <div class="card"> 
+          <div class="face front"> 
+            <div class="inner">   
+              <img class="img" src="img/ministry.jpg">
+            </div>
+          </div> 
+          <div class="face back"> 
+            <div class="inner text-center"> 
+              <h4>My Ministry</h4>
+              <p>I spend a good amount of my time
+              in talking to others about my faith, and helping them learn about the Bible and its Author.</p>
+            </div>
+          </div>
+        </div>   
       </div>
-      <div class="col-lg-5">
-        <a href="http://noah.dost.gov.ph/#/websafe">
-          <img class="img-thumbnail" src="img/thumbnail2.png" style="height:250px;width:250px">
-        </a>
-      </div>      
     </div>
-  <hr class="featurette-divider">
-    <div class="row" id="project3">
-      <div class="col-lg-7">
-        <h3>accelerate.ph</h3> 
-        <br>
-        <br>
-        <p>
-          <span class="label label-pill label-default">php</span>        
-        </p>
-        <p>
-          <span class="label label-pill label-primary">Web Development</span>
-        </p>
-        <p>
-          <span class="label label-pill label-success">Project Management</span>
-        </p>
+  <div class="col-md-4 col-xs-12">
+      <div class="flip">
+        <div class="card"> 
+          <div class="face front"> 
+            <div class="inner">   
+              <img class="img" src="img/programming1.png">
+            </div>
+          </div> 
+          <div class="face back"> 
+            <div class="inner text-center"> 
+              <h4>Programming</h4>
+              <p>Programming is a super power! Work that should've taken forever could be done in mere minutes
+              by a few keystrokes. And that's only the beginning. I'm willing to teach others this life-changing skill.</p>
+            </div>
+          </div>
+        </div>   
       </div>
-      <div class="col-lg-5">
-        <a href="http://accelerate.ph">
-          <img class="img-thumbnail" src="img/thumbnail3.jpg">
-        </a>
-      </div>      
     </div>
-  <hr class="featurette-divider">
-    <div class="row" id="project4">
-      <div class="col-lg-7">
-        <h3>Lifetime Kuisines Management Website</h3>
-        <br>
-        <br>
-        <p>
-          <span class="label label-pill label-default">Python</span>        
-          <span class="label label-pill label-default">Django</span>        
-        </p>
-        <p>
-          <span class="label label-pill label-primary">Web Development</span>
-        </p>
-        <p>
-          <span class="label label-pill label-success">Backend Development</span>
-          <span class="label label-pill label-success">Schema Design and Implementation</span>
-        </p>
-      </div>
-      <div class="col-lg-5">
-        <a href="http://lifetimekuisines.ph">
-          <img class="img-thumbnail" src="img/thumbnail4.jpg">
-        </a>
-      </div>      
-    </div>
-    <hr class="featurette-divider">
   </div>
+<div class="row">
+  <div class="col-md-4 col-xs-12">
+      <div class="flip">
+        <div class="card"> 
+          <div class="face front"> 
+            <div class="inner">   
+              <img class="img" src="img/tree.jpg">
+            </div>
+          </div> 
+          <div class="face back"> 
+            <div class="inner text-center"> 
+              <h4>Mathematics and Computer Science</h4>
+              <p>I love the mathematically rigorous parts of Computer Science, dealing with Turing Machines, and Automata.
+              I also enjoy reading about Artificial Intelligence, and how it's the new electricity.
 
-  <footer class="footer" style="margin:0px 40px 30px 40px">
-      <p class="footer-copyright pull-left" style="margin-top:10px">© 2016 Carl Yu</p>
-      <div class="pull-right">
-        <ul class="list-inline">
-          <li>
-            <a href="http://facebook.com/csyu0">
-              <i class="icon ion-social-facebook" style="font-size:25px"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/carl-yu-41286b56">
-              <i class="icon ion-social-linkedin" style="font-size:25px"></i>
-            </a>
-          </li>
-          <li>
-            <a href="http://github.com/csyu1">
-              <i class="icon ion-social-github" style="font-size:25px"></i>
-            </a>
-          </li>
-
-        </ul>
+              <p>The picture is a tree because trees are some of the most recurring data structures in the wild ;)</p>
+              </p>
+            </div>
+          </div>
+        </div>   
       </div>
-  </footer>
+    </div>
+  <div class="col-md-4 col-xs-12">
+      <div class="flip">
+        <div class="card"> 
+          <div class="face front"> 
+            <div class="inner">   
+              <img class="img" src="img/pillars.jpg">
+            </div>
+          </div> 
+          <div class="face back"> 
+            <div class="inner text-center"> 
+              <h4>Science and Technology</h4>
+              <p>I am eternally infatuated with Science, and its applications. Some of the projects I've worked on
+              are from the Department of Science and Technology in the Philippines, and they were really satisfying
+              experiences.</p>
+            </div>
+          </div>
+        </div>   
+      </div>
+    </div>
+  <div class="col-md-4 col-xs-12">
+      <div class="flip">
+        <div class="card"> 
+          <div class="face front"> 
+            <div class="inner">   
+              <img class="img" src="img/book.jpg">
+            </div>
+          </div> 
+          <div class="face back"> 
+            <div class="inner text-center"> 
+              <h4>Books</h4>
+              <p>I'm an avid reader! You'll often find me reading an ebook on my iphone
+              while I'm relaxing, or waiting for someone.
+              <a href="https://www.goodreads.com/user/show/51378916-carl-yu">Here</a>
+              is a partial list of some of the books I've read.</p>
+            </div>
+          </div>
+        </div>   
+      </div>
+    </div>
+  </div>
+<div class="row">
+  <div class="col-md-4 col-xs-12">
+      <div class="flip">
+        <div class="card"> 
+          <div class="face front"> 
+            <div class="inner">   
+              <img class="img" src="img/health.jpg">
+            </div>
+          </div> 
+          <div class="face back"> 
+            <div class="inner text-center"> 
+              <h4>Health</h4>
+              <p>This is a work-in-progress. I bought a fitbit on July 2017, and it helped me be more active.
+              I was seriously lacking in the exercise department before,
+              but now, I enjoy the feeling of adrenaline rushing through my veins! :D
+              Hopefully, I could keep this up.</p>
+            </div>
+          </div>
+        </div>   
+      </div>
+    </div>
+  <div class="col-md-4 col-xs-12">
+      <div class="flip">
+        <div class="card"> 
+          <div class="face front"> 
+            <div class="inner">   
+              <img class="img" src="img/ukulele.jpg">
+            </div>
+          </div> 
+          <div class="face back"> 
+            <div class="inner text-center"> 
+              <h4>Music</h4>
+              <p>As a hobby, I play the ukulele! I like musicals. I'm also a terrible singer. :p</p>
+            </div>
+          </div>
+        </div>   
+      </div>
+    </div>
+  <div class="col-md-4 col-xs-12">
+      <div class="flip">
+        <div class="card"> 
+          <div class="face front"> 
+            <div class="inner">   
+              <img class="img" src="img/programming.png">
+            </div>
+          </div> 
+          <div class="face back"> 
+            <div class="inner text-center"> 
+              <h4>Massive Open Online Courses</h4>
+              <p>Learning from MOOC's is one of the ways I try to keep
+              up with the latest technological trends. My favorite, so far, is Andrew Ng's Machine Learning
+              in Coursera.</p>
+            </div>
+          </div>
+        </div>   
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -209,6 +348,10 @@
           } // End if
         });
       });
+$('.flip').hover(function(){
+        $(this).find('.card').toggleClass('flipped');
+
+    });
     </script>
   </body>
 </html>
